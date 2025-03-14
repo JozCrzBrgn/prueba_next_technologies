@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0-bookworm
+    restart: always
+    container_name: mysql_db
+    environment:
+      - MYSQL_DATABASE=prueba_tecnica_db
+      - MYSQL_ROOT_PASSWORD=password01
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data_sql:/var/lib/mysql
+      - ./output:/app/output
+
+  app:
+    build: .
+    container_name: python_app
+    depends_on:
+      - mysql
+    environment:
+      - MYSQL_HOST=mysql_db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password01
+      - MYSQL_DATABASE=prueba_tecnica_db
+    volumes:
+      - .:/app
+      - ./output:/app/output
+    command: ["sh", "-c", "sleep 10 && python load.py && python extract.py && python transform.py && python dispertion.py && python view_sql.py"]
