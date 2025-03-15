@@ -58,6 +58,8 @@ En esta etapa se crea una vista SQL que permita visualizar el monto total transa
 - Se utilizaron las tablas **charges** y **companies**, relacionadas mediante el campo `company_id`, para obtener el nombre de la compañía y los detalles de las transacciones.
 - La vista se creó en la base de datos utilizando el comando `CREATE VIEW`.
 
+![VISTA](img/VISTA.gif)
+
 ## Sección 2: Creación de una API
 Objetivo: Calcular el número faltante de un conjunto de los primeros 100 números naturales del cual se extrajo uno.
 
@@ -74,3 +76,4 @@ Objetivo: Calcular el número faltante de un conjunto de los primeros 100 númer
 - **Validación de Entradas**: Se implementaron validaciones para asegurar que los datos ingresados por el usuario sean correctos (por ejemplo, que el número a extraer esté dentro del rango permitido).
 - La API se probó utilizando **Postman**, una herramienta ampliamente utilizada para probar APIs.
 
+![API](img/API.gif)
