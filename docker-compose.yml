@@ -27,4 +27,6 @@ services:
     volumes:
       - .:/app
       - ./output:/app/output
-    command: ["sh", "-c", "sleep 10 && python load.py && python extract.py && python transform.py && python dispertion.py && python view_sql.py"]
+    ports:
+      - "5000:5000"
+    command: ["sh", "-c", "sleep 10 && python load.py && python extract.py && python transform.py && python dispertion.py && python view_sql.py && python api.py"]
