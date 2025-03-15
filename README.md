@@ -54,25 +54,25 @@ En esta etapa se estructuran y almacenan los datos transformados en un esquema d
 ### [**1.5 SQL - Vista de Transacciones por Día**](https://github.com/JozCrzBrgn/prueba_next_technologies/blob/main/view_sql.py)
 En esta etapa se crea una vista SQL que permita visualizar el monto total transaccionado por día para cada compañía. Esta vista facilita el análisis de las transacciones diarias y proporciona una herramienta eficiente para generar reportes o realizar consultas adicionales.
 
-- La vista, denominada total_transacciones_por_dia, se diseñó para agrupar las transacciones por compañía y fecha, sumando los montos correspondientes a cada día.
+- La vista, denominada **total_transacciones_por_dia**, se diseñó para agrupar las transacciones por compañía y fecha, sumando los montos correspondientes a cada día.
 - Se utilizaron las tablas **charges** y **companies**, relacionadas mediante el campo `company_id`, para obtener el nombre de la compañía y los detalles de las transacciones.
 - La vista se creó en la base de datos utilizando el comando `CREATE VIEW`.
 
 ![VISTA](img/VISTA.gif)
 
 ## Sección 2: Creación de una API
-Objetivo: Calcular el número faltante de un conjunto de los primeros 100 números naturales del cual se extrajo uno.
+Objetivo: Calcular los números faltantes de un conjunto de los primeros 100 números naturales del cual se extrajo uno.
 
 ### 2.1 Implementación
-- **Flask**: Se eligió Flask por su simplicidad y flexibilidad para crear APIs rápidamente. Es ideal para proyectos pequeños o medianos donde se requiere un servidor ligero y eficiente.
-- **Python**: Debido a su facilidad de uso y compatibilidad con Flask.
-- **Class** `NaturalNumbers`: Se diseñó una clase llamada **NaturalNumbers** que representa el conjunto de los primeros 100 números naturales. Esta clase incluye los siguientes métodos:
+- **Flask**: Se eligió *Flask* por su simplicidad y flexibilidad para crear APIs rápidamente. Es ideal para proyectos pequeños o medianos donde se requiere un servidor ligero y eficiente.
+- **Python**: Debido a su facilidad de uso y compatibilidad con *Flask*.
+- **Clase** `NaturalNumbers`: Se diseñó una clase llamada [**NaturalNumbers**](https://github.com/JozCrzBrgn/prueba_next_technologies/blob/main/natural_numbers.py) que representa el conjunto de los primeros 100 números naturales. Esta clase incluye los siguientes métodos:
     1. `__init__`: Inicializa el conjunto con los números del 1 al 100.
     2. `extract`: Extrae un número específico del conjunto.
     3. `lost`: Calcula y devuelve los números faltantes en el conjunto.
-- **Creación de la API con Flask**: Se configuró Flask para exponer dos endpoints:
+- **Creación de la API con Flask**: Se configuró Flask para exponer dos [**endpoints**](https://github.com/JozCrzBrgn/prueba_next_technologies/blob/main/api.py):
     - `/extract`: Permite extraer un número del conjunto.
-    - `/find_missing`: Devuelve los números faltantes en el conjunto.
+    - `/lost`: Devuelve los números faltantes en el conjunto.
 - **Validación de Entradas**: Se implementaron validaciones para asegurar que los datos ingresados por el usuario sean correctos (por ejemplo, que el número a extraer esté dentro del rango permitido).
 - La API se probó utilizando **Postman**, una herramienta ampliamente utilizada para probar APIs.
 
