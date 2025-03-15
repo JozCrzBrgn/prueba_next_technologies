@@ -1,6 +1,6 @@
 import pymysql
 
-# Conectar con MySQL
+#* CONEXIÓN A LA BASE DE DATOS
 conn = pymysql.connect(
     host="mysql",
     user="root",

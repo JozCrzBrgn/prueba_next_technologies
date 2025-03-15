@@ -1,6 +1,7 @@
 import pymysql
 import pandas as pd
 
+#* CONEXIÓN A LA BASE DE DATOS
 conn = pymysql.connect(
     host="mysql",
     user="root",

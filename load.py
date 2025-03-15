@@ -2,7 +2,7 @@ import pymysql
 import pandas as pd
 import numpy as np
 
-# Conectar con MySQL
+#* CONEXIÓN A LA BASE DE DATOS
 conn = pymysql.connect(
     host="mysql",
     user="root",
