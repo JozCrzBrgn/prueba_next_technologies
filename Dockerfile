@@ -11,6 +11,8 @@ COPY extract.py extract.py
 COPY transform.py transform.py
 COPY dispertion.py dispertion.py
 COPY view_sql.py view_sql.py
+COPY api.py api.py
+COPY natural_numbers.py natural_numbers.py
 # Se instalan las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 # Exponer el puerto 5000 para la API
