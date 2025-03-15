@@ -1,5 +1,7 @@
 # prueba_next_technologies
 
+A continuación se describe la solución de la [prueba tecnica](https://github.com/JozCrzBrgn/prueba_next_technologies/blob/main/docs/Prueba%20t%C3%A9cnica%20Python.docx).
+
 ## Sección 1: Procesamiento y Transferencia de Datos
 
 ### [**1.1 Carga de Información**](https://github.com/JozCrzBrgn/prueba_next_technologies/blob/main/load.py)
