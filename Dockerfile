@@ -13,5 +13,7 @@ COPY dispertion.py dispertion.py
 COPY view_sql.py view_sql.py
 # Se instalan las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
+# Exponer el puerto 5000 para la API
+EXPOSE 5000
 # Esperar a que MySQL esté listo antes de ejecutar la inicialización
-CMD ["sh", "-c", "sleep 10 && python load.py"]
+CMD ["sh", "-c", "sleep 10 && python load.py && python extract.py && python transform.py && python dispertion.py && python view_sql.py && python api.py"]
